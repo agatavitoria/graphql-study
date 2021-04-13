@@ -1,0 +1,16 @@
+# ! NA FRENTE DI TIPO SIGNIFICA OBRIGATÓRIO
+type User {
+    id: ID!
+    name: String!
+    email: String!
+}
+
+# A ! SIMBOLIZA Q TUDO Q ESTIVER DENTRO DO ARRAY TEM Q SER DO TIPO USUARIO
+type Query {
+    users: [User!]!
+    user(id: ID!) : User
+}
+
+type Mutation {
+    createUser(name: String!, email: String!) : User
+}
